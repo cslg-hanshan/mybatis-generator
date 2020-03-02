@@ -9,7 +9,6 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import org.apache.ibatis.session.RowBounds;
 
 public interface PermissionMapper {
     long countByExample(PermissionExample example);
@@ -31,8 +30,6 @@ public interface PermissionMapper {
     int insert(Permission record);
 
     int insertSelective(Permission record);
-
-    List<Permission> selectByExampleWithRowbounds(PermissionExample example, RowBounds rowBounds);
 
     List<Permission> selectByExample(PermissionExample example);
 

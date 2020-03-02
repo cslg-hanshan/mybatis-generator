@@ -9,7 +9,6 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import org.apache.ibatis.session.RowBounds;
 
 public interface RoleMapper {
     long countByExample(RoleExample example);
@@ -29,8 +28,6 @@ public interface RoleMapper {
     int insert(Role record);
 
     int insertSelective(Role record);
-
-    List<Role> selectByExampleWithRowbounds(RoleExample example, RowBounds rowBounds);
 
     List<Role> selectByExample(RoleExample example);
 

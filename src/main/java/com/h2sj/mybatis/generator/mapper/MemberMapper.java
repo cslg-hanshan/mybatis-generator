@@ -9,7 +9,6 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import org.apache.ibatis.session.RowBounds;
 
 public interface MemberMapper {
     long countByExample(MemberExample example);
@@ -31,8 +30,6 @@ public interface MemberMapper {
     int insert(Member record);
 
     int insertSelective(Member record);
-
-    List<Member> selectByExampleWithRowbounds(MemberExample example, RowBounds rowBounds);
 
     List<Member> selectByExample(MemberExample example);
 

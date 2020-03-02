@@ -5,7 +5,6 @@ import com.h2sj.mybatis.generator.entity.RoleToPermissionExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.session.RowBounds;
 
 public interface RoleToPermissionMapper {
     long countByExample(RoleToPermissionExample example);
@@ -19,8 +18,6 @@ public interface RoleToPermissionMapper {
     int insert(RoleToPermission record);
 
     int insertSelective(RoleToPermission record);
-
-    List<RoleToPermission> selectByExampleWithRowbounds(RoleToPermissionExample example, RowBounds rowBounds);
 
     List<RoleToPermission> selectByExample(RoleToPermissionExample example);
 
